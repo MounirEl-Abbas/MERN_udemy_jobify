@@ -19,8 +19,8 @@ import errorHandlerMiddleware from "./middleware/error-handler.js";
 //middleware
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Welcome!");
+app.get("/api/v1", (req, res) => {
+  res.json({ msg: "API" });
 });
 
 //routes
