@@ -14,4 +14,11 @@ class NotFoundError extends CustomAPIError {
   }
 }
 
-export { BadRequestError, NotFoundError };
+class UnauthenticatedError extends CustomAPIError {
+  constructor(message) {
+    super(message);
+    this.statusCode = StatusCodes.UNAUTHORIZED;
+  }
+}
+
+export { BadRequestError, NotFoundError, UnauthenticatedError };
