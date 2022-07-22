@@ -24,6 +24,7 @@ const JobsContainer = () => {
       getJobs();
     }, 700);
     return () => clearTimeout(delayForTyping);
+    // eslint-disable-next-line
   }, [search, searchStatus, searchType, sort, page]);
 
   if (isLoading) {

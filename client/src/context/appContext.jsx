@@ -239,7 +239,7 @@ const AppProvider = ({ children }) => {
       });
     } catch (error) {
       console.log(error.response);
-      // logoutUser();
+      logoutUser();
     }
     clearAlert();
   };
@@ -279,7 +279,7 @@ const AppProvider = ({ children }) => {
       getJobs();
     } catch (error) {
       console.log(error.response);
-      // logoutUser();
+      logoutUser();
     }
   };
 
@@ -296,7 +296,7 @@ const AppProvider = ({ children }) => {
       });
     } catch (error) {
       console.log(error);
-      // logoutUser()
+      logoutUser();
     }
     clearAlert();
   };
