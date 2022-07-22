@@ -23,6 +23,7 @@ import {
   EDIT_JOB_ERROR,
   SHOW_STATS_BEGIN,
   SHOW_STATS_SUCCESS,
+  CLEAR_FILTERS,
 } from "./actions";
 import { initialState } from "./appContext";
 
@@ -236,7 +237,7 @@ const reducer = (state, action) => {
       alertText: "Job Updated!",
     };
   }
-  if (action.type === EDIT_JOB_BEGIN) {
+  if (action.type === EDIT_JOB_ERROR) {
     return {
       ...state,
       isLoading: false,
@@ -261,6 +262,15 @@ const reducer = (state, action) => {
       isLoading: false,
       stats: action.payload.stats,
       monthlyApplications: action.payload.monthlyApplications,
+    };
+  }
+  if (action.type === CLEAR_FILTERS) {
+    return {
+      ...state,
+      search: "",
+      searchStatus: "all",
+      searchType: "all",
+      sort: "latest",
     };
   }
 
